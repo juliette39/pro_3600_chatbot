@@ -1,0 +1,8 @@
+git clone git@gitlabens.imtbs-tsp.eu:juliette.debono/pro3600-mon-test.git
+cd pro3600-mon-test  
+git pull 
+git add path
+git rm path
+git restore path
+git commit -m "ajout app"
+git push origin

@@ -1,0 +1,6 @@
+Flask
+pysqlite3
+tensorflow
+nltk
+numpy
+keras

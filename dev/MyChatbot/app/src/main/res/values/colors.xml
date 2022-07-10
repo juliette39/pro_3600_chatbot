@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="mauve">#ba9593</color>
+	<color name="violet_fonce">#1a1423</color>
+	<color name="vert_fonce">#285313</color>
+	<color name="vert">#71dc56</color>
+	<color name="black">#FF000000</color>
+	<color name="white">#FFFFFFFF</color>
+	<color name="rose_fonce">#FCC0C5</color>
+	<color name="rose_clair">#FFE4E1</color>
+	<color name="vert_fonce_Jimi">#81A969</color>
+	<color name="vert_clair_Jimi">#81A969</color>
+	<color name="trans">#00000000 </color>
+
+
+</resources>

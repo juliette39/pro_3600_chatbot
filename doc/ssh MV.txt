@@ -1,0 +1,18 @@
+User : Juliette
+Ip : 157.159.195.77
+
+terminal connexion
+ssh user@ip
+passwd
+
+Ajouter fichier
+scp <fichier> user@ip:/chemin/du/fichier (/home/juliette)
+
+Path : /home/juliette/pro3600-mon-test
+
+Quand changement du serveur
+cd pro3600-mon-test/dev/chatbot-serveur/
+git pull --rebase
+tmux ou tmux attach
+Dans : ctrl C si ouvert, puis executer : python3 serveur.py
+Pour quitter : ctrl B puis ds

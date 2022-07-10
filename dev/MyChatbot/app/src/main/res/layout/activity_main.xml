@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		tools:context="fr.tsp.jimithechatbot.MainActivity"
+		android:orientation="vertical"
+		android:id="@+id/layout">
+
+	<RelativeLayout
+		android:id="@+id/layout_top"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:layout_marginStart="10dp"
+		android:layout_marginEnd="10dp"
+		tools:context="com.example.toyo.viewflipperonclick.MainActivity">
+
+		<RadioGroup
+				android:id="@+id/group"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:checkedButton="@+id/radio2"
+				android:layout_gravity="center_horizontal|center"
+				android:orientation="horizontal"
+				tools:ignore="UselessParent">
+
+
+
+			<!-- Pour parler en continu, mettre android:autoStart sur "true" : -->
+		<ViewFlipper
+			android:id="@+id/flipper"
+			android:layout_width="70dp"
+			android:layout_height="50dp"
+			android:inAnimation="@anim/reveal"
+			android:outAnimation="@anim/hide"
+			android:flipInterval="400"
+			android:autoStart="true">
+
+			<ImageView
+				android:id="@+id/jimi1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/jimi1" />
+
+			<ImageView
+				android:id="@+id/jimi2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/jimi2" />
+		</ViewFlipper>
+
+		<TextView
+				android:id="@+id/conversation"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="28dp"
+				android:paddingVertical="8dp"
+				android:layout_marginStart="1dp"
+				android:layout_marginEnd="40dp"
+				android:background="@drawable/speech_bubble_left"
+				android:textSize="16sp"
+				android:text="Jimi: Ask me something\nin english"
+				android:textColor="@color/black"
+				android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+			<ImageView
+					android:id="@+id/img_music"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:layout_marginTop="10dp"
+					android:layout_marginStart="-40dp"
+					android:src="@drawable/pause"/>
+
+			<Button
+					android:id="@+id/buttonMusic"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:layout_marginTop="10dp"
+					android:layout_marginStart="-40dp"
+					android:background="@color/trans"
+					android:flipInterval="0"/>
+
+		</RadioGroup>
+
+	</RelativeLayout>
+
+	<ScrollView android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:layout_marginStart="10dp"
+				android:layout_marginEnd="20dp"
+				android:layout_marginBottom="80dp">
+	<LinearLayout
+			android:id="@+id/discussionScrollview"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+	</LinearLayout>
+	</ScrollView>
+
+	<LinearLayout
+			android:id="@+id/layout_list"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_marginTop="-70dp"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:layout_marginBottom="10dp"
+			android:layout_weight="1"
+			android:gravity="center|bottom"
+			android:orientation="vertical"
+	>
+
+		<RadioGroup
+				android:id="@+id/envoieMess"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:padding="10dp"
+				android:checkedButton="@+id/radio2"
+				android:layout_gravity="center_horizontal|center"
+				android:orientation="horizontal"
+				android:background="@color/rose_clair"
+				tools:ignore="UselessParent">
+
+			<EditText
+					android:id="@+id/question"
+					android:layout_width="match_parent"
+					android:layout_height="50dp"
+					android:layout_marginEnd="70dp"
+					android:textStyle="normal|bold"
+					android:textColor="@color/black"
+					android:textSize="16sp"
+					android:autofillHints="question"
+					android:hint="ask me a question"
+					android:inputType="text"
+					tools:ignore="LabelFor"/>
+
+			<Button
+					android:id="@+id/add_button"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:background="@drawable/send_button"
+					android:layout_marginStart="-70dp"/>
+		</RadioGroup>
+	</LinearLayout>
+</LinearLayout>
+
+

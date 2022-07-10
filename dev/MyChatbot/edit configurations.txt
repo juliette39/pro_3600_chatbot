@@ -1,0 +1,4 @@
+Cut line include ':app' from the file settings.gradle.
+On Android Studio, click on the File Menu, and select Sync Project with Gradle files.
+After synchronisation, paste back line include ':app' to the settings.gradle file.
+Re-run Sync Project with Gradle files again.
